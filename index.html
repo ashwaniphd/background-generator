@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>RBP-SITE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerin">
+<head>
+ <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">	
+<style>
+*{
+	box-sizing: border-box;
+}
+
+.w3-myfont {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+ .w3-header{
+   background-color: #71BBE8;
+   background-image:url(img/Protein_TBP_PDB_1c9b.png);
+   background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: fixed;  
+}
+
+.w3-sidebar{
+
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.w3-sidebar a {
+  display: block;
+  color: red;
+  padding: 16px;
+  text-decoration: none;
+}
+.w3-sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.w3-sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+body,h1,h2,h3,h4,h5 {font-family: "Times New Roman", Times, serif;}
+body {font-size: 8px; }
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+#chartcontainer{
+  color: #ffdab9;
+}
+
+.mySlides {display:none;}
+</style>
+</head>
+<body class="w3-container w3-sand" style="width: 90%; margin: 0 auto;">
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-large w3-collapse" ><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-16"><b></b></h3>
+  </div>
+  <div class="w3-bar-block w3-animate-right"> 	
+  	<img class= "left w3-round" src="img/csir_logo_1_214x236.png" alt="CSIR"  style= "float: left; width:70%; height:50%"><br><br><br><br><br><br><br><br>
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-round-large w3-blue"><em>Home</em></a><br> 
+    <a href="http://scbb.ihbt.res.in/" onclick="w3_close()" class="w3-bar-item w3-button w3-round-large w3-blue"><em>About</em></a><br>
+    <a href="#study-protocol" onclick="w3_close()" class="w3-bar-item w3-button w3-round-large w3-blue" i><em>Designed Study Protocol</em></a><br>
+   <div class="w3-dropdown-hover">
+    <button class="w3-bar-item w3-button w3-round-large w3-blue"><em>Important Finding</em><i class="fa fa-caret-down"></i></button><br>
+    <div class="w3-dropdown-content w3-bar-block w3-animate-right">
+      <a href="zoombar.html" onclick="w3_close()" class="w3-bar-item w3-button w3-round-large w3-blue"><em>Number of RBPs on each miRNA</em></a><br>
+      <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-round-large w3-blue"><em>Link2</em></a></div><br> 
+      <a href="#FAQ" onclick="w3_close()" class="w3-bar-item w3-button w3-round-large w3-blue"><em>FAQ</em></a><br>
+     <a href="#Team" onclick="w3_close()" class="w3-bar-item w3-button w3-round-large w3-blue"><em>Group Member</em></a><br>  
+    <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-round-large w3-blue"><em>Contact</em></a><br>
+</div>
+</nav>
+
+<!-- Top menu on small screens -->
+<!-- Overlay effect when opening sidebar on small screens -->
+
+
+<!-- !PAGE CONTENT! -->
+<div class= "w3-header w3-container w3-center " style="margin-left: 200px;margin-right: 10px; padding: 1px;">
+<!--<img class= "  left w3-round" src="img/csir_logo_1_214x236.png" alt="CSIR"  style= "float: left; width:10%; height:10%">--><img class= "right w3-round" src="img/IHBT_logo_final.png"  alt="IHBT" style= "float:right; width: 8%;">
+  <!-- Header -->
+  <h1 class= "w3-container w3-myfont w3-xxlarge w3-text-white  w3-animate-left  " style="font-size: 40px; position:relative; top: 15%; "><b>Saga of RBP-miRNA Interplay in miRNA biogenesis</b></h1></div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ <div class="w3-container" id="designers" style="margin-top:75px; padding-left: 220px; word-spacing: 2px;">
+ <h1 class="w3-xlarge w3-text-blue w3-italic"><em>Learn more about miRNA Biogenesis from short video</em></h2><br><br>
+ 	<video class="video-fluid z-depth-1" autoplay loop controls muted style="width: 80%; height: 500px;">
+  <source src="img/video/miRNA_biogenesis_final1_anoop.mp4" type="video/mp4" />
+</video>
+   
+   <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px; padding-left: 1px">
+    <h1 class="w3-xlarge w3-text-blue w3-italic"><em>Graphical Abstract</em></h1>
+   <img src="img/miRNA_formation.png" class="w3-border " alt="Graphical abstract" style="padding: auto;width: 80%; height: 500px">
+    <p></p>
+    <p>
+    </p>
+  </div>
+
+
+  
+  <!-- story of miRNA Biogenesis -->
+
+ 
+
+  <div class="w3-container" id="designers" style="margin-top:75px; padding-left: 1px; word-spacing: 1px;">
+ <h1 class="w3-xlarge w3-text-blue w3-italic"><em>Introduction</em></h2><br><br>
+ <img src="img/img_btn/RBP.png" data-toggle="popover-click" data-img="img/img_btn/1_rbp.png"></a>
+<img src="img/img_btn/miRNA_biogenesis.png" data-toggle="popover-click" data-img="img/img_btn/rsz_2_biogenesis.jpg"></a>
+<img src="img/img_btn/problem_statement.png" data-toggle="popover-click" data-img="img/img_btn/rsz_problem_s.png"></a>
+<img src="img/img_btn/motivation_shortcome_jha_et_al.png" data-toggle="popover-click" data-img="img/img_btn/rsz_3_genesis.png"></a>
+<img src="img/img_btn/Clipseq_data_trend.png" data-toggle="popover-click" data-img="img/img_btn/rsz_4_clipseq_trend.png"></a>
+<img src="img/img_btn/summary_ngs.png" data-toggle="popover-click" data-img="img/img_btn/rsz_5_data.png"></a><br><br>
+</div>
+<script>
+	// popovers initialization - on click
+$('[data-toggle="popover-click"]').popover({
+  html: true,
+  trigger: 'click',
+  placement: 'bottom',
+  content: function () { return '<img src="' + $(this).data('img') + '" />'; }
+});
+	</script>
+
+
+  <!-- Methodology -->
+ <div class="w3-container" id="designers" style="margin-top:75px; padding-left: 1px; word-spacing: 2px;">
+ <h1 class="w3-xlarge w3-text-blue w3-italic" id="study-protocol"><em>Study Protocol</em></h1>
+ <img src="img/img_btn/pre_miRNA.png" data-toggle="popover-click" data-img="img/img_btn/rsz_mirbase.png"></a>
+<img src="img/img_btn/pri_miRNA.png" data-toggle="popover-click" data-img="img/img_btn/rsz_7_pri_mirna.png"></a>
+<img src="img/img_btn/binding_site_RBP.png" data-toggle="popover-click" data-html="true" data-img="img/img_btn/rsz_8_rbp_binding.png" href="zoombar.html"></a>
+<img src="img/img_btn/cluster.png" data-toggle="popover-click" data-img="img/img_btn/rsz_9_cluster.png"></a>
+<img src="img/img_btn/correlation.png" data-toggle="popover-click" data-img="img/img_btn/rsz_10_expressio_binding.png"></a>
+<img src="img/img_btn/coexpression.png" data-toggle="popover-click" data-img="img/img_btn/rsz_11_1_popup_coexpression.png"></a>
+<img src="img/img_btn/bayesian_network.png" data-toggle="popover-click" data-img="img/img_btn/13_Network Image.png"></a>
+<img src="img/img_btn/RBP_miRNA_regulome.png" data-toggle="popover-click" data-img="img/img_btn/rsz_14_regulome.png"></a>
+<p><b></b>:</p>
+</div>
+<script>
+	// popovers initialization - on click
+$('[data-toggle="popover-click"]').popover({
+  html: true,
+  trigger: 'click',
+  placement: 'bottom',
+  content: function () { return '<img src="' + $(this).data('img') + '" />'; }
+});
+	</script>
+
+   <!-- Study Protocol -->
+  <!--<div class="w3-container" id="designers" style="margin-top:75px; padding-left: 220px;">
+    <h1 class="w3-xlarge w3-text-blue w3-italic"><b>Clip-seq data Distribution</b></h1>
+    <div id="container" style="min-width: 340px  height: 600px  max-width: 1000px  margin: 0 auto  background-color: #ffdab9;"></div>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>-->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+<!--<script>
+	Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: true,
+        type: 'pie'
+    },
+    title: {
+        text: ''
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: 'CLIP-seq',
+            y: 61.41,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'ICLIP',
+            y: 11.84
+        }, {
+            name: 'PAR-CLIP',
+            y: 10.85
+        }, {
+            name: 'HITS-CLIP',
+            y: 4.67
+        }]
+    }]
+});
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+ //popovers initialization - on hover
+$('[data-toggle="popover-hover"]').popover({
+  html: true,
+  trigger: 'hover',
+  placement: 'bottom',
+  content: function () { return '<img src="' + $(this).data('img') + '" />'; }
+});
+
+
+
+</script><p></p>
+    <p>
+    </p>
+    <p><b></b>:</p>
+  </div>-->
+ <div class="w3-container" id="services" style="margin-top:75px; padding-left: 1px; word-spacing: 10px;">
+<h1 class="w3-xlarge w3-text-blue w3-italic"><em>Result and Discussion</em></h1></div>
+
+<div>
+</div>
+<script>
+	// popovers initialization - on click
+$('[data-toggle="popover-click"]').popover({
+  html: true,
+  trigger: 'click',
+  placement: 'bottom',
+  content: function () { return '<img src="' + $(this).data('img') + '" />'; }
+});
+	</script>
+
+  <!-- The Team -->
+  <!--<div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team2.jpg" alt="" style="width:100%">
+        <div class="w3-container">
+          <h3></h3>
+          <p class="w3-opacity"></p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team1.jpg" alt="" style="width:100%">
+        <div class="w3-container">
+          <h3></h3>
+          <p class="w3-opacity"></p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <<img src="/w3images/team3.jpg" alt="" style="width:100%">
+        <div class="w3-container">
+          <h3></h3>
+          <p class="w3-opacity"></p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+  <!-- Packages / Pricing Tables -->
+  <!--<div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b></b></h1>
+    <hr style="width:50px;border:5px dotted red" class="w3-round">
+    <p></p>
+  </div>-->
+
+  <!--<div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+        <li class="w3-padding-16">Floorplanning</li>-->
+        
+        <!--<li class="w3-padding-16">
+          <h2></h2>
+          <span class="w3-opacity"></span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-white w3-padding-large w3-hover-black"></button>
+        </li>
+      </ul>
+    </div>-->
+        
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <!--<li class="w3-red w3-xlarge w3-padding-32">Pro</li>
+        <li class="w3-padding-16">Floorplanning</li>-->
+ 
+
+</div><
+
+<!-- W3.CSS Container -->
+<!--<div class=" w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Designed by<a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">ashwani</a></p></div>-->
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+<!--Footer-->
+
+<div class="w3-container " style="font-size: 3;  padding-left: 50px; padding-right: auto; bottom:0; width: 100%; text-align: center; background-color: #71BBE8">
+  <h6>Designed and developed by Dr. Ashwani Kumar</h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em style="font-size: 15px;">ashwanibitian@gmail.com</em>
+  <p>Copyright. &copy;2019</p>
+</div>
+
+</body>
+</html>
